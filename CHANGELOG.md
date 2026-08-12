@@ -10,6 +10,10 @@ All notable changes to this project will be documented in this file.
 - Optional `Keys` method for caches enabling consumers of cache resources to enumerate keys, caches that do not support key listing yield `ErrKeyListingNotSupported` @ecordell
 - `memory`, `file`, `aws_s3` and `gcp_cloud_storage` caches support `Keys` @ecordell
 
+### Changed
+
+- `apache/pulsar-client-go` updated to v0.21.0, picking up fixes for a consumer busy-spin deadlock, a connection panic on close, and a race that dropped messages before handler registration @slachiewicz
+
 ### Fixed
 
 - `parse_big_decimal` rejects scales above 16383 to avoid unbounded big-integer work @aratz-lasa
